@@ -13,3 +13,5 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 require __DIR__.'/auth.php';
+
+Route::get('articles', \App\Livewire\ArticleIndex::class);
