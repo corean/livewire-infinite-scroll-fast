@@ -16,7 +16,7 @@ class ArticleSeeder extends Seeder
     public function run(): void
     {
         Article::factory()
-            ->times(100)
+            ->times(10000)
             ->state(new Sequence(fn($sequence) => ['created_at' => now()->addDays($sequence->index)]))
             ->create();
     }

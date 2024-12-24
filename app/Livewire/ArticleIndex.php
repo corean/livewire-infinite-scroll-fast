@@ -18,6 +18,8 @@ class ArticleIndex extends Component
             ->pluck('id')
             ->chunk(10)
             ->toArray();
+
+        ray($this->chunks);
     }
 
     public function loadMore()
